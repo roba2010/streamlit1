@@ -89,10 +89,10 @@ elif page == "📊 EDA":
 
     st.subheader("6️⃣ Pairplot لعينة من البيانات")
     st.write("هذا الرسم يعطي فكرة عن العلاقات بين عدة متغيرات.")
+
     sample_df = df.sample(200)
-    fig, ax = plt.subplots(figsize=(10, 6))
-    sns.pairplot(sample_df.iloc[:, :5])
-    st.pyplot(fig)
+    g = sns.pairplot(sample_df.iloc[:, :5])
+    st.pyplot(g.fig)
 
 
 # ============================================================
